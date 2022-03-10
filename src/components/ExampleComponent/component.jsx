@@ -16,7 +16,7 @@ export default function ExampleComponent({ post }) {
   return (
     <div className="col-md-4 text-center">
       <img
-        src={image}
+        src={image.url}
         alt={imageAlt}
       />
       <h3 className="h4 mt-3">

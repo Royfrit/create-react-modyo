@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Repository from './repositories/RepositoryFactory';
+import ApiRepository from './repositories/ApiRepository';
 import liquidParser from './liquid/liquidParser';
 import ExampleComponent from './components/ExampleComponent/component.jsx';
 
 import './App.scss';
-
-const ApiRepository = Repository.get('api');
+console.log(ApiRepository)
+// const ApiRepository = Repository.get('api');
 
 interface Entry {
   fields: {image: object; title: string; description: string}
@@ -22,6 +22,7 @@ function App():JSX.Element {
     setLoading(true);
     try {
       const response = await ApiRepository.getEntriesByType('capacitacion-modyo', 'post');
+      console.log(response)
       const postsResponse = response.data.entries?.map((entry:Entry) => ({
         description: entry.fields.description,
         title: entry.fields.title,

@@ -5,7 +5,7 @@ const localLiquidVariables = {
     url: 'https://un.modyo.cloud/testing'
   },
   account: {
-    url: 'https://un.modyo.cloud'
+    url: 'https://cajalosandes.modyo.cloud/'
   },
   user: {
     access_token: null

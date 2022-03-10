@@ -4,8 +4,7 @@ const repositories = {
   api: ApiRepository,
 };
 const RepositoryFactory = {
-  get: (name) => {
-    return repositories[name]},
+  get: (name) => repositories[name],
 };
 
 export default RepositoryFactory
